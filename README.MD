@@ -20,7 +20,15 @@ Simply clone the repository to your local machine:
 
 ## Tests
 ```
+Describe: getArray();  
+ 
+Test: "Returns an array of number(s) that starts with 0 and the input becomes the last element.";  
+Code: getArray(5);  
+Expected output: [0, 1, 2, 3, 4, 5];  
 
+Test: "When input is a negative number or not an integer, it will return an error message";  
+Code: getArray(-1);  
+Expected output: "Please provide a positive integer";  
 ```
 
 ## Link

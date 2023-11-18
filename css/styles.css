@@ -1,1 +1,32 @@
-/*# sourceMappingURL=styles.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(246, 255, 236);
+}
+body section {
+  background-color: white;
+  width: 60vw;
+  height: 80vh;
+  margin: 10vh auto;
+  padding: 4rem;
+  border: 2.5px solid black;
+  box-shadow: 12px 12px 0 rgba(0, 83, 0, 0.5);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hidden {
+  display: none;
+}
+
+form input {
+  width: 12rem;
+  padding: 0.25rem 0.5rem;
+  margin: 1rem;
+}/*# sourceMappingURL=styles.css.map */
