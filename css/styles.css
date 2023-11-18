@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Glass+Antiqua&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -18,7 +20,17 @@ body section {
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
+}
+body section h1 {
+  font-family: "Glass Antiqua", cursive;
+  font-size: 3.25rem;
+  margin: 0 auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-top: 3px solid rgba(0, 83, 0, 0.25);
+  border-bottom: 3px solid rgba(0, 83, 0, 0.25);
+  padding: 0.5rem 1rem;
 }
 
 .hidden {
@@ -29,4 +41,25 @@ form input {
   width: 12rem;
   padding: 0.25rem 0.5rem;
   margin: 1rem;
+  font-family: "PT Sans", sans-serif;
+}
+form button {
+  width: 8rem;
+  padding: 0.25rem 0;
+  margin: 0 0.25rem;
+  font-family: "PT Sans", sans-serif;
+  letter-spacing: 0.5px;
+  background-color: rgba(0, 83, 0, 0.75);
+  border: 0;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+form button:hover {
+  background-color: rgb(0, 83, 0);
+}
+
+div {
+  height: 24vh;
+  background-color: rgba(0, 83, 0, 0.15);
 }/*# sourceMappingURL=styles.css.map */
