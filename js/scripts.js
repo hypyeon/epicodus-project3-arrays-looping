@@ -8,10 +8,12 @@ function getArray(maxNum) {
 };
 function replaceNumToPhrase(maxNum) {
     const numArr = getArray(maxNum);
-    const arrLen = numArr.length;
-    const oneTwoThreeArr = ["1", "2", "3"];
-    const newArr = [];
+    let joinedArr = numArr.join(", ");
 
+    joinedArr = joinedArr.replace(/1/g, "Beep!");
+    return joinedArr;
+
+    /*
     for (let i = 0; i <= arrLen; i++) {
         if (numArr[i].includes(oneTwoThreeArr[0])) {
             newArr.push("Beep!");
@@ -24,6 +26,7 @@ function replaceNumToPhrase(maxNum) {
         };
     };
     return newArr;
+    */
 };
 
 //UI logic: 
