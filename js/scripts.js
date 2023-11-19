@@ -1,46 +1,41 @@
 //business logic:
-function getArray(v) {
+function getArray(maxNum) {
     const numArr = [];
-    if (Number.isInteger(v) && v >= 0) {
-        for (let i = 0; i <= v; i++) {
-            numArr.push(i);
-        }
-        return numArr;
-    } else {
-        return `Please provide a positive integer.`;
+    for (let i = 0; i <= maxNum; i++) {
+        numArr.push(i);
     }
+    return numArr.map((num) => num.toString());
 };
-function replaceNumToPhrase(v) {
-    const numArr = getArray(v);
+function replaceNumToPhrase(maxNum) {
+    const numArr = getArray(maxNum);
     const arrLen = numArr.length;
-    const one = "1";
-    const two = "2";
-    const three = "3";
+    const oneTwoThreeArr = ["1", "2", "3"];
+    const newArr = [];
+
     for (let i = 0; i <= arrLen; i++) {
-        const currentNum = numArr[i].toString();
-        if (currentNum.includes(one)) {
-            numArr[i] = "Beep!";
-        } else if (currentNum.includes(two)) {
-            numArr[i] = "Boop!";
-        } else if (currentNum.includes(three)) {
-            numArr[i] = "Won't you be my neighbor?";
+        if (numArr[i].includes(oneTwoThreeArr[0])) {
+            newArr.push("Beep!");
+        } else if (numArr[i].includes(oneTwoThreeArr[1])) {
+            newArr.push("Boop!");
+        } else if (numArr[i].includes(oneTwoThreeArr[2])) {
+            newArr.push("Won't you be my neighbor?");
         } else {
-            return;
-        }
-    }
-    return numArr;
-}
+            newArr.push(parseInt(numArr[i]));
+        };
+    };
+    return newArr;
+};
 
 //UI logic: 
 function formHandler() {
     const form = document.querySelector("form");
     const result = document.getElementById("result");
-    const numValue = document.getElementById("number").value;
-    const num = parseInt(numValue);
-    const array = replaceNumToPhrase(num);
 
     form.addEventListener("submit", (e) => {
         e.preventDefault();
+        const numValue = document.getElementById("number").value;
+        const num = parseInt(numValue);
+        const array = replaceNumToPhrase(num);
         result.classList.remove("hidden");
         result.innerText = array;
     });
