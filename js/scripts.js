@@ -9,12 +9,13 @@ function getArray(maxNum) {
 function getUserName() {
     const userName = document.getElementById("name").value;
     const trimmedName = userName.trim();
-    const removeQuotes = parseInt(trimmedName);
-    if (trimmedName && typeof removeQuotes === "string") {
-        return userName;
-    } else {
-        return "friend";
-    };
+    const nameArr = trimmedName.split(""); 
+    for (let i = 0; i < nameArr.length; i++) {
+        if (parseInt(nameArr[i]) !== NaN) {
+            return "friend";
+        } 
+    }
+    return trimmedName;
 };
 function replaceNumToPhrase(maxNum) {
     const numArr = getArray(maxNum);
