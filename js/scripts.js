@@ -7,15 +7,19 @@ function getArray(maxNum) {
     return numArr.map((num) => num.toString());
 };
 function getUserName() {
-    const userName = document.getElementById("name").value;
-    const trimmedName = userName.trim();
-    const nameArr = trimmedName.split(""); 
-    for (let i = 0; i < nameArr.length; i++) {
-        if (parseInt(nameArr[i]) !== NaN) {
-            return "friend";
-        } 
-    }
-    return trimmedName;
+    const nameValue = document.getElementById("name").value;
+    const userName = nameValue.trim();
+    const nameArr = userName.split(""); 
+    let convertedArr = nameArr.map((element) => {
+        return isNaN(element) ? element : Number(element);
+    });
+    for (let i = 0; i < convertedArr.length; i++) {
+        if (typeof convertedArr[i] !== "string") {
+            return 'friend';
+        } else {
+            return userName.charAt(0).toUpperCase() + userName.substring(1).toLowerCase();
+        }
+    };
 };
 function replaceNumToPhrase(maxNum) {
     const numArr = getArray(maxNum);
