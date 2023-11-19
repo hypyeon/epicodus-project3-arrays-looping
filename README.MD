@@ -1,5 +1,5 @@
-# Mr. Roboger's Neighborhood
-by Hayeong Pyeon
+# Mr. Roboger's Neighborhood 🏠
+by Hayeong Pyeon (https://www.hayeong.website)
 
 ## Overview
 - This is an independent project assigned by Epicodus. 
@@ -11,8 +11,8 @@ by Hayeong Pyeon
 1. [Description](#description)
 2. [Tests](#tests)
 3. [Link](#link)
-3. [Technologies Used](#technologies_used)
-4. [More Information](#more_information)
+3. [Technologies Used](#technologiesused)
+4. [More Information](#moreinformation)
 
 ## Description
 
