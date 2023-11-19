@@ -8,25 +8,20 @@ function getArray(maxNum) {
 };
 function replaceNumToPhrase(maxNum) {
     const numArr = getArray(maxNum);
-    let joinedArr = numArr.join(", ");
-
-    joinedArr = joinedArr.replace(/1/g, "Beep!");
-    return joinedArr;
-
-    /*
-    for (let i = 0; i <= arrLen; i++) {
-        if (numArr[i].includes(oneTwoThreeArr[0])) {
+    const oneTwoThreeArr = ["1", "2", "3"];
+    const newArr = [];
+    numArr.forEach((num) => {
+        if (num.includes(oneTwoThreeArr[0])) {
             newArr.push("Beep!");
-        } else if (numArr[i].includes(oneTwoThreeArr[1])) {
+        } else if (num.includes(oneTwoThreeArr[1])) {
             newArr.push("Boop!");
-        } else if (numArr[i].includes(oneTwoThreeArr[2])) {
+        } else if (num.includes(oneTwoThreeArr[2])) {
             newArr.push("Won't you be my neighbor?");
         } else {
-            newArr.push(parseInt(numArr[i]));
-        };
-    };
+            newArr.push(parseInt(num));
+        }
+    });
     return newArr;
-    */
 };
 
 //UI logic: 
