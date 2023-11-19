@@ -6,22 +6,33 @@ function getArray(maxNum) {
     }
     return numArr.map((num) => num.toString());
 };
+function getUserName() {
+    const userName = document.getElementById("name").value;
+    const trimmedName = userName.trim();
+    const removeQuotes = parseInt(trimmedName);
+    if (trimmedName && typeof removeQuotes === "string") {
+        return userName;
+    } else {
+        return "friend";
+    };
+};
 function replaceNumToPhrase(maxNum) {
     const numArr = getArray(maxNum);
     const oneTwoThreeArr = ["1", "2", "3"];
     const newArr = [];
+    const userName = getUserName();
     numArr.forEach((num) => {
-        if (num.includes(oneTwoThreeArr[0])) {
-            newArr.push("Beep!");
+        if (num.includes(oneTwoThreeArr[2])) {
+            newArr.push(`Won't you be my neighbor, ${userName}?`);
         } else if (num.includes(oneTwoThreeArr[1])) {
             newArr.push("Boop!");
-        } else if (num.includes(oneTwoThreeArr[2])) {
-            newArr.push("Won't you be my neighbor?");
+        } else if (num.includes(oneTwoThreeArr[0])) {
+            newArr.push("Beep!");
         } else {
-            newArr.push(parseInt(num));
+            newArr.push(num);
         }
     });
-    return newArr;
+    return newArr.join(", ");
 };
 
 //UI logic: 

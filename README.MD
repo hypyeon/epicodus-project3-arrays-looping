@@ -26,11 +26,23 @@ Test: "Returns an array of number(s) as strings that starts with 0 and the input
 Code: getArray(5);  
 Expected output: ["0", "1", "2", "3", "4", "5"];  
 
+Describe: getUserName();
+
+Test: "Returns a name that user types in the text input. If nothing is typed in, 
+
 Describe: replaceNumToPhrase();
 
-Test: "Within the array created with getArray() function, if an element includes "1", "2", or "3", the element will be replaced by a phrase.";  
-Code: replaceNumToPhrase(["0", "1", "2", "3", "4", "5"]);  
-Expected output: ["0", "Beep!", "Boop!", "Won't you be my neighbor?", "4", "5"];  
+Test: "Within the array created by getArray() function, if an element includes "1", the element will be replaced by a phrase 'Beep!'";  
+Code: replaceNumToPhrase(1);  
+Expected output: [0, "Beep!"];  
+
+Test: "Within the array created by getArray() function, if an element includes "2", the element will be replaced by a phrase 'Boop!'";  
+Code: replaceNumToPhrase(2);  
+Expected output: [0, "Beep!", "Boop!"];  
+
+Test: "Within the array created by getArray() function, if an element includes "3", the element will be replaced by a phrase 'Won't you be my neighbor?', and the phrase will also include a name user types in the text input field. If no value is tracked for user name, 'friend' will print.";  
+Code: replaceNumToPhrase(3);  
+Expected output: [0, "Beep!", "Boop!", "Won't you be my neighbor, friend?"];  
 ```
 
 ## Link
