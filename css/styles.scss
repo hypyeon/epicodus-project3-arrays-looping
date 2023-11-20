@@ -13,7 +13,7 @@ body {
     section {
         background-color: white;
         width: 60vw;
-        height: 80vh;
+        min-height: 80vh;
         margin: 10vh auto;
         padding: 4rem;
         border: 2.5px solid black;
@@ -44,6 +44,9 @@ form {
         font-family: $fontPTSans;
         border: 2px solid rgb(0, 83, 0);
         border-radius: 8px;
+    }
+    input[type="number"] {
+        margin-top: 1rem;
     }
     button {
         width: 8rem;
